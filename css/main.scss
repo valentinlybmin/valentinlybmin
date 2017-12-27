@@ -291,7 +291,6 @@ h2 {
 @media (max-width: 1000px) {
     
     #img-me {
-    margin-left: 30%;
     width: 200px;
     }
     
@@ -323,13 +322,11 @@ h2 {
         border-radius: 0px;
         width: 200px;
         margin: 10px;
-        margin-left: 35%;
-
     }
 
   #intro-text {
-  margin: 0 auto;
-  }
+      margin: 10px;
+    }
 
   .side-menu {
     float: left;

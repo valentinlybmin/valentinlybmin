@@ -1,0 +1,365 @@
+
+$back-color:#f3f3f3;
+$firstColor:#292929;
+$secondColor:#272727;
+$thirdColor:#efefef;
+$lightRed:#ec9999;
+
+@mixin gradient-gray() {
+    background: rgba(250,250,250,1);
+    background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(235,235,235,1) 48%, rgba(219,219,219,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(48%, rgba(235,235,235,1)), color-stop(100%, rgba(219,219,219,1)));
+    background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(235,235,235,1) 48%, rgba(219,219,219,1) 100%);
+    background: -o-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(235,235,235,1) 48%, rgba(219,219,219,1) 100%);
+    background: -ms-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(235,235,235,1) 48%, rgba(219,219,219,1) 100%);
+    background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(235,235,235,1) 48%, rgba(219,219,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#dbdbdb', GradientType=0 );
+}
+@mixin gradient-darkGray(){
+    background: rgba(41,41,41,1);
+    background: -moz-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 1%, rgba(54,53,54,1) 50%, rgba(66,66,66,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,41,41,1)), color-stop(1%, rgba(41,41,41,1)), color-stop(50%, rgba(54,53,54,1)), color-stop(100%, rgba(66,66,66,1)));
+    background: -webkit-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 1%, rgba(54,53,54,1) 50%, rgba(66,66,66,1) 100%);
+    background: -o-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 1%, rgba(54,53,54,1) 50%, rgba(66,66,66,1) 100%);
+    background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 1%, rgba(54,53,54,1) 50%, rgba(66,66,66,1) 100%);
+    background: linear-gradient(to bottom, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 1%, rgba(54,53,54,1) 50%, rgba(66,66,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#424242', GradientType=0 );
+}
+
+@mixin box-shadow($values) {
+    -webkit-box-shadow: $values;
+    -moz-box-shadow: $values;
+    box-shadow: $values;
+}
+
+/*-------rules------*/
+body {
+    background-color: $back-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: #e6e6e6;
+}
+
+a {
+  h3 {
+    padding: 5px;
+    border-bottom: solid 1px #b3b3b3;
+  }
+
+  color: #e70303;
+
+  &:visited {
+    color: #e70303;
+  }
+
+  &:hover {
+    color: #e66c6c;
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.dark-p {
+  color: #262626;
+}
+
+h2 {
+  border-bottom: solid 1px;
+}
+
+/* nav */
+
+.topnav {
+  overflow: hidden;
+}
+
+#topnavBox a {
+  color: #454545;
+  margin-right: 5px;
+  border: solid 1px #6e6e6e;
+}
+
+#nav-container {
+  text-align: center;
+}
+
+#topnavBox {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #7e7e7e;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 2px;
+}
+
+/* Change the color of links on hover */
+
+#topnavBox a:hover {}
+
+/* Add an active class to highlight the current page */
+
+.active {
+  border: solid 2px black !important;
+  color: #171717 !important;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* end of nav */
+
+.main-h1 {
+  margin-top: 5px;
+  padding-bottom: 10px;
+  color: $secondColor ;
+  padding: 4px;
+  border-radius:100px;    
+}
+
+#first-section {
+  @include gradient-darkGray();
+//  background-color:$firstColor;
+  color: white;
+  overflow: hidden;
+ border-radius:10px 10px 0px 0px;    
+
+}
+
+#img-me {
+  width: 17em;
+  border: solid 1px $thirdColor;
+  margin: 10%;
+  margin-left: 30%;
+  border-radius: 200px;
+}
+
+#intro-text {
+  @include box-shadow( inset 10px 13px 34px -15px rgba(23,22,23,1));   
+  width: 85%;
+  margin-left: 20%;
+  margin-top: 3%;
+  font-size: 18px;
+  padding: 20px;
+  border: solid 1px #2f2f2f;
+  @include gradient-darkGray();
+}
+
+.side-menu {
+  float: right;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white;
+  border: solid 2px silver;
+  margin: 4%;
+  margin-right:8%; 
+  margin-top:8%;     
+  cursor: pointer;
+  clear: right;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+
+  &:hover {
+    border: solid 2px $lightRed;
+      border-radius: 5px;
+  }
+}
+
+.side-menu-img {
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+}
+
+#linkedin-logo {
+  background-image: url("../images/In-White-34px-R.png");
+}
+
+#git-logo {
+  background-image: url("../images/GitHub-Mark-Light-32px.png");
+}
+
+#second-section {
+ @include gradient-gray();
+  padding: 25px;
+  border-left: solid 1px silver;
+  border-right:solid 1px silver;
+  border-bottom:solid 1px silver;   
+  border-top:solid 6px ;       
+  padding-top: 10px;
+    
+  h3 {
+    border-bottom: solid 2px $lightRed;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    border-left: solid 1px;
+    list-style: none;
+    padding: 10px;
+    line-height: 20px;
+    font-weight: bold;
+
+  }
+    
+    #activeRow{
+//        background-color: #c6cbde;
+//        border: solid 1px #1e1e1e;
+    }
+    
+}
+
+#fourth-section p {
+  color: black;
+}
+
+/* Portfolio*/
+
+.showcase {
+  margin: 20px;
+
+  img {
+    width: 70%;
+  }
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    &:not(:first-child) {
+      display: none;
+    }
+
+    &.icon {
+      float: right;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+
+    a {
+      &.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #intro-text {
+    width: 70%;
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-h1 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #intro-text {
+    width: 70%;
+    margin-left: 35%;
+  }
+
+  .main-h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  #img-me {
+    margin: 2%;
+    margin-right: 0%;
+    width: 9em;
+    float: left;
+  }
+
+  #intro-text {
+    font-size: 0.8em;
+    margin: 1%;
+    margin-top: 4%;
+    margin-right: 1.5%;
+    float: right;
+  }
+
+  .side-menu {
+    float: left;
+    height: 20px;
+    width: 20px;
+    font-size: 9px;
+    margin: 1px;
+    border: solid 1px ;
+  }
+  .side-menu:hover{
+            border: solid 1px $lightRed;
+
+    }
+
+  .side-menu-img {
+    background-size: 9px;
+  }
+
+  .main-h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-h1 {
+    font-size: 15px;
+  }
+
+  #topnavBox {
+    width: 150px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  li {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

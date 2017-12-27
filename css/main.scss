@@ -161,6 +161,8 @@ h2 {
   padding: 20px;
   border: solid 1px #2f2f2f;
   @include gradient-darkGray();
+  border-radius: 5px;
+
 }
 
 .side-menu {
@@ -319,13 +321,14 @@ h2 {
 @media (max-width: 750px) {
     
     #img-me {
-        border-radius: 0px;
+        border-radius: 5px;
         width: 200px;
-        margin: 10px;
+        margin: 1%;
+        
     }
 
   #intro-text {
-      margin: 10px;
+        margin: 1%;
     }
 
   .side-menu {

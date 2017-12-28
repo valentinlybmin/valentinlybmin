@@ -1,13 +1,22 @@
 /*-------rules------*/
+* {
+  padding: 0;
+  margin: 0; }
+
+#main-container {
+  width: 60%; }
+
 body {
   background-color: #f3f3f3; }
+
+h1 {
+  font-size: 26px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif; }
 
 p {
-  font-family: 'Open Sans', sans-serif;
-  color: #e6e6e6; }
+  font-family: 'Open Sans', sans-serif; }
 
 a {
   color: #e70303; }
@@ -65,12 +74,14 @@ h2 {
   display: none; }
 
 /* end of nav */
+.over {
+  text-align: center; }
+
 .main-h1 {
   margin-top: 5px;
   padding-bottom: 10px;
   color: #272727;
-  padding: 4px;
-  border-radius: 100px; }
+  padding: 4px; }
 
 #first-section {
   background: #292929;
@@ -86,31 +97,21 @@ h2 {
   border-radius: 10px 10px 0px 0px; }
 
 #img-me {
-  width: 17em;
-  border: solid 1px #efefef;
-  margin: 10%;
-  margin-left: 30%;
-  border-radius: 200px; }
+  height: 14.5em;
+  margin: 10px;
+  border: solid 1px black; }
+
+#first-section {
+  height: 40%; }
 
 #intro-text {
-  -webkit-box-shadow: inset 10px 13px 34px -15px #171617;
-  -moz-box-shadow: inset 10px 13px 34px -15px #171617;
-  box-shadow: inset 10px 13px 34px -15px #171617;
-  width: 85%;
-  margin-left: 20%;
-  margin-top: 7%;
-  font-size: 18px;
-  padding: 20px;
-  border: solid 1px #2f2f2f;
-  background: #292929;
-  background: -moz-linear-gradient(top, #292929 0%, #292929 1%, #363536 50%, #424242 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #292929), color-stop(1%, #292929), color-stop(50%, #363536), color-stop(100%, #424242));
-  background: -webkit-linear-gradient(top, #292929 0%, #292929 1%, #363536 50%, #424242 100%);
-  background: -o-linear-gradient(top, #292929 0%, #292929 1%, #363536 50%, #424242 100%);
-  background: -ms-linear-gradient(top, #292929 0%, #292929 1%, #363536 50%, #424242 100%);
-  background: linear-gradient(to bottom, #292929 0%, #292929 1%, #363536 50%, #424242 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#424242', GradientType=0 );
-  border-radius: 5px; }
+  color: #292929;
+  margin: 10px;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-top: solid 2px black;
+  border-bottom: solid 4px black; }
 
 .side-menu {
   float: right;
@@ -177,13 +178,13 @@ h2 {
     width: 70%; }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .topnav a:not(:first-child) {
     display: none; }
   .topnav a.icon {
     float: right;
     display: block; } }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   .topnav.responsive {
     position: relative; }
     .topnav.responsive a {
@@ -194,40 +195,37 @@ h2 {
         position: absolute;
         right: 0;
         top: 0; } }
+@media (max-width: 1250px) {
+  #intro-text {
+    margin-left: 10%; }
+
+  .main-h1 {
+    font-size: 20px; } }
 @media (max-width: 1200px) {
   #intro-text {
-    width: 70%;
-    margin-left: 35%; } }
-@media (max-width: 1200px) {
-  .main-h1 {
-    font-size: 27px; } }
+    font-size: 1em; } }
 @media (max-width: 1000px) {
   #img-me {
-    width: 200px; }
-
-  #intro-text {
-    width: 70%;
-    margin-left: 35%; }
+    height: 12em; }
 
   .main-h1 {
-    font-size: 20px; }
+    font-size: 15px; }
 
   p {
-    font-size: 12px; }
+    font-size: 10px; }
 
   .side-menu {
     height: 30px;
     width: 30px;
     font-size: 9px; } }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   #img-me {
-    border-radius: 5px;
-    width: 200px;
-    margin-left: 30%; }
+    border-radius: 2px;
+    margin: 10px;
+    border: none; }
 
   #intro-text {
-    margin: 0 auto;
-    margin-bottom: 5px; }
+    margin-left: 50px; }
 
   .side-menu {
     float: left;
@@ -244,13 +242,16 @@ h2 {
     background-size: 9px; }
 
   .main-h1 {
-    font-size: 18px; }
+    font-size: 12px; } }
+@media (max-width: 720px) {
+  #intro-text {
+    margin: 0px; } }
+@media (max-width: 650px) {
+  #img-me {
+    height: 15em; }
 
-  p {
-    font-size: 10px; } }
-@media (max-width: 600px) {
   .main-h1 {
-    font-size: 15px; }
+    font-size: 10px; }
 
   #topnavBox {
     width: 150px; }

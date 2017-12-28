@@ -1,10 +1,17 @@
-
+/*colors*/
 $back-color:#f3f3f3;
 $firstColor:#292929;
 $secondColor:#272727;
 $thirdColor:#efefef;
 $lightRed:#ec9999;
 $lightFontColor:#e6e6e6;
+
+/*links*/
+$firstSectionPattern:"../images/3px-tile.png";
+$secondSectionPattern:"../images/az-subtle.png";
+$bodyPattern:"../images/brilliant.png";
+
+
 
 @mixin gradient-gray() {
     background: rgba(250,250,250,1);
@@ -26,11 +33,14 @@ $lightFontColor:#e6e6e6;
     background: linear-gradient(to bottom, rgba(41,41,41,1) 0%, rgba(41,41,41,1) 1%, rgba(54,53,54,1) 50%, rgba(66,66,66,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#424242', GradientType=0 );
 }
-
 @mixin box-shadow($values) {
     -webkit-box-shadow: $values;
     -moz-box-shadow: $values;
     box-shadow: $values;
+}
+@mixin background-texture($color, $imgUrl){
+    background-color: $color;
+    background-image:url($imgUrl); 
 }
 
 /*-------rules------*/
@@ -42,7 +52,8 @@ $lightFontColor:#e6e6e6;
     width: 60%;
 }
 body {
-    background-color: $back-color;
+    @include background-texture($back-color,$bodyPattern);
+
 }
 h1{
     font-size: 26px;
@@ -146,12 +157,11 @@ h2 {
 }
 
 #first-section {
-    @include gradient-darkGray();
+//    @include gradient-darkGray();
+    @include background-texture($firstColor,$firstSectionPattern);
     color: white;
     overflow: hidden;
-    border-radius:10px 10px 0px 0px;    
 }
-
 
 #img-me {
     height: 14.5em;
@@ -159,17 +169,14 @@ h2 {
     border: solid 1px black;
 }
 
-#first-section{
-    height: 40%;
-}
-
 #intro-text {
     color:$firstColor;
     margin:10px;    
     font-size: 1.2em;
     padding: 10px;
+    @include background-texture(white,$secondSectionPattern);
     background-color: $back-color;
-    border-top:solid 2px black;
+    border-top:solid 4px black;
     border-bottom: solid 4px black;
 
 }
@@ -210,7 +217,8 @@ h2 {
 }
 
 #second-section {
- @include gradient-gray();
+
+  @include background-texture(#EDEDED,$secondSectionPattern);
   padding: 25px;
   border-left: solid 1px silver;
   border-right:solid 1px silver;
@@ -326,8 +334,6 @@ h2 {
 @media (max-width: 800px) {
     
     #img-me {
-        border-radius: 2px;
-        margin: 10px;
         border:none;        
     }
 
@@ -366,7 +372,6 @@ h2 {
 }
 @media (max-width: 650px) {
     .over{
-        text-align:left; 
     }
     
     #img-me{

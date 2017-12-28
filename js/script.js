@@ -32,7 +32,7 @@ $( document ).ready(function() {
     
     var activeBtn="about";
     var respWidth =$(window).width(); 
-    alert(respWidth);
+//    alert(respWidth);
     if(respWidth>=600){
         $(".topnav a").mouseenter(function (Event) {
             if(this.id !== activeBtn )  {

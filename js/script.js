@@ -7,16 +7,6 @@ $( "#portfolio-section" ).hide();
 $( "#contact-section" ).hide();
 $( ".main-h1" ).hide();
 var lastEvent = "#about-section";
-
-function responsiveNav() {
-    var x = document.getElementById("topnavBox");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-} 
-
 $( document ).ready(function() {
     
     $( ".main-h1" ).slideToggle( "slow", function() {
@@ -33,7 +23,7 @@ $( document ).ready(function() {
     var activeBtn="about";
     var respWidth =$(window).width(); 
 //    alert(respWidth);
-    if(respWidth>=600){
+    if(respWidth>=700){
         $(".topnav a").mouseenter(function (Event) {
             if(this.id !== activeBtn )  {
                 $(this).animate({ 

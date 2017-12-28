@@ -247,8 +247,8 @@ h2 {
   #intro-text {
     margin: 0px; } }
 @media (max-width: 650px) {
-  #img-me {
-    margin: 0px; }
+  .over {
+    text-align: left; }
 
   .main-h1 {
     font-size: 10px; }

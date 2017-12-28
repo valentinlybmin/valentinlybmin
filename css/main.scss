@@ -365,8 +365,12 @@ h2 {
     
 }
 @media (max-width: 650px) {
+    .over{
+        text-align:left; 
+    }
+    
     #img-me{
-        margin: 0px;
+
     }
     
   .main-h1 {

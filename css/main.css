@@ -248,6 +248,7 @@ h2 {
     margin: 0px; } }
 @media (max-width: 650px) {
   #img-me {
+    margin: 0px;
     height: 15em; }
 
   .main-h1 {

@@ -125,6 +125,8 @@ h2 {
   .side-menu:hover {
     border: solid 2px #ec9999;
     border-radius: 5px; }
+  .side-menu a {
+    color: white; }
 
 .side-menu-img {
   background-repeat: no-repeat;
